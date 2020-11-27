@@ -803,6 +803,10 @@ template {
   overflow: hidden;
 }
 
+.swiper-container {
+  margin-left: 0;
+}
+
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
