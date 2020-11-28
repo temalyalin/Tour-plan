@@ -810,7 +810,6 @@ template {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
-  background-image: url(../img/newsletter-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -856,6 +855,7 @@ template {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  width: 240px;
 }
 
 .newsletter-title__strong {
@@ -1348,6 +1348,15 @@ template {
     margin-bottom: 37px;
   }
   .subscribe {
+    width: 100%;
+  }
+  .reviews {
+    padding: 40px 0 50px 0;
+  }
+  .activities {
+    padding: 40px 0 60px 0;
+  }
+  .card {
     width: 100%;
   }
 }
