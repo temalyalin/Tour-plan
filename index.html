@@ -13,19 +13,19 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
-  <header class="navbar">
+  <header class="navbar navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-top">
         <a href="#" class="logo">
           <img src="img/horizontal-logo.svg" alt="logo: Best Tour Plan" class="logo__image">
         </a>
-        <form action="#" class="search navbar__search">
+        <form action="#" class="search navbar__search navbar__search--mobile_hidden">
           <input type="text" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: search">
           </button>
         </form>
-        <a href="#" class="user navbar__user">
+        <a href="#" class="user navbar__user navbar__user--mobile_hidden">
         <img src="img/avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
         <span class="user__name">Nathan</span>
         </a>
@@ -43,6 +43,21 @@
       <div class="container">
         <nav class="navbar-nav">
           <ul class="navbar-menu">
+            <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+              <a href="#" class="user navbar__user navbar__user--mobile_visible">
+                <img src="img/avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+                <span class="user__name user__name--light">Nathan</span>
+              </a>
+              <!-- /.user -->
+            </li>
+            <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+              <form action="#" class="search navbar__search navbar__search--mobile_visible">
+                <input type="text" class="search__input" placeholder="Search Location">
+                <button class="search__button">
+                 <img src="img/search.svg" alt="Icon: search">
+                </button>
+              </form>
+            </li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
             <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
@@ -172,7 +187,6 @@
         </form>
       </div>
       <!-- /.newsletter-wrapper -->
-    </div>
   </section>
   <section class="reviews">
     <div class="container">
@@ -380,8 +394,10 @@
             <input type="text" class="input footer__input" placeholder="Your Full Name*">
             <input type="text" class="input footer__input" placeholder="Phone Number*">
             <textarea cols="30" rows="10" class="footer__message" placeholder="message"></textarea>
-            <button type="submit" class="button footer__button">Send</button>
-            <span class="footer__info">* Required Fields</span>
+            <div class="footer__bottom">
+              <button type="submit" class="button footer__button">Send</button>
+              <span class="footer__info">* Required Fields</span>
+            </div>
           </form>
         </div>
         <!-- /.footer__contacts-form -->
