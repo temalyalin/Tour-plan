@@ -416,7 +416,7 @@ template {
   line-height: 18px;
 }
 
-.navbar-menu__item--mobile_visible {
+.navbar-menu__item--mobile--visible {
   display: none;
 }
 
@@ -809,6 +809,11 @@ template {
 
 .swiper-container {
   margin-left: 0;
+}
+
+.package__image:first-child(1) {
+  width: 366px;
+  height: 500px;
 }
 
 .newsletter {
@@ -1281,7 +1286,6 @@ template {
 }
 
 .footer__message {
-  max-width: 545px;
   height: 135px;
   background-color: #fff;
   border-radius: 4px;
@@ -1315,6 +1319,54 @@ template {
   color: #E0E0E0;
 }
 
+.footer__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__payment {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 101px;
+}
+
+.footer__policy {
+  -webkit-transform: translateX(33%);
+          transform: translateX(33%);
+}
+
+.footer__privacy {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.footer__privacy:nth-last-child(1) {
+  margin-right: 0;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -1332,7 +1384,11 @@ template {
     width: 230px;
     height: 230px;
   }
-  .card .footer__input {
+  .footer__input {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__message {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1431,6 +1487,12 @@ template {
     grid-row: 2 / 3;
     grid-column: span 2;
   }
+  .footer__legal {
+    grid-column: span 2;
+  }
+  .footer__additional {
+    grid-column: span 2;
+  }
   .footer__contact-details {
     grid-column: span 5;
     -ms-grid-row: 3;
@@ -1440,6 +1502,20 @@ template {
     grid-column: span 5;
     -ms-grid-row: 4;
     grid-row: 4;
+  }
+  .footer__input {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .footer__payment {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / span 6;
+    margin-top: 56px;
+  }
+  .footer__policy {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
@@ -1451,17 +1527,18 @@ template {
   body {
     padding-top: 70px;
   }
-  .navbar--mobile_fixed {
+  .navbar--mobile--fixed {
     position: fixed;
+    overflow: hidden;
     left: 0;
     top: 0;
     right: 0;
     z-index: 99;
   }
-  .navbar__user--mobile_hidden, .navbar__search--mobile_hidden {
+  .navbar__user--mobile--hidden, .navbar__search--mobile--hidden {
     display: none;
   }
-  .navbar__user--mobile_visible, .navbar__search--mobile_visible {
+  .navbar__user--mobile--visible, .navbar__search--mobile--visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1496,7 +1573,7 @@ template {
   .navbar-menu__item {
     margin-bottom: 20px;
   }
-  .navbar-menu__item--mobile_visible {
+  .navbar-menu__item--mobile--visible {
     display: block;
   }
   .menu-button {
@@ -1650,6 +1727,9 @@ template {
   .card {
     width: 100%;
   }
+  .footer {
+    padding-top: 69px;
+  }
   .footer-wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1660,11 +1740,17 @@ template {
     -ms-grid-column: 1;
     grid-column: 1;
   }
+  .footer__title--inline {
+    width: 299px;
+    margin-bottom: 20px;
+  }
   .footer__social-network {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 1;
     grid-column: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .footer__additional {
     -ms-grid-row: 3;
@@ -1710,9 +1796,27 @@ template {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
   .footer__info {
     margin-bottom: 15px;
+  }
+  .footer__payment {
+    margin-top: 30px;
+    -ms-grid-row: 8;
+    grid-row: 8;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__policy {
+    margin-bottom: 10px;
+  }
+  .footer__privacy {
+    margin-right: 5px;
   }
 }
 
@@ -1722,6 +1826,9 @@ template {
   }
   .hotel__slider {
     height: 170px;
+  }
+  .search__input {
+    width: 240px;
   }
   .reviews__title {
     font-size: 18px;

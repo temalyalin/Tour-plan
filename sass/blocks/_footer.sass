@@ -79,7 +79,6 @@
     margin-bottom: 15px
     flex-basis: 48%
   &__message
-    max-width: 545px
     height: 135px
     background-color: $light
     border-radius: 4px
@@ -106,3 +105,26 @@
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+  &__bottom
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__payment
+    grid-column: 2 / span 3
+    justify-content: space-between
+    display: flex
+    align-items: center
+    margin-top: 101px
+  &__policy
+    transform: translateX(33%)
+  &__privacy
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    text-decoration: none
+    color: $light
+    margin-right: 10px
+    &:nth-last-child(1)
+      margin-right: 0
