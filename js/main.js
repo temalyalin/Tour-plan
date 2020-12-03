@@ -44,6 +44,6 @@ menuButton.addEventListener('click', function() {
     .classList.toggle ("navbar-bottom--visible");
 });
 
-if ( $('.navbar-bottom').is(':visible') ) { //если popup виден, то
-    document.body.style.overflow = "hidden"; //прячем скролл. Нет скролла - нет проблем
+if ( $('.navbar-bottom').is(':visible') ) { 
+    document.body.style.overflow = "hidden"; 
 }
