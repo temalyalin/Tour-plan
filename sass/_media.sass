@@ -18,6 +18,24 @@
       flex-basis: 100%
     &__message
       flex-basis: 100%
+  .package
+    &-wrapper
+      grid-template-columns: 1fr 1fr
+    &__image--big
+      width: 550px
+      object-fit: cover
+    &__text
+      margin-bottom: 69px
+    &__column-1
+      width: 418px
+    &__image
+      width: 465px
+      object-fit: cover
+    &__column
+      width: 465px
+    &__offer
+      font-size: 10px
+      padding: 8px 15px
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -98,6 +116,32 @@
       margin-top: 56px
     &__policy
       transform: translateX(0%)
+  .modal
+    &__bottom
+      flex-direction: column-reverse
+      align-items: start
+    &__info
+      margin-bottom: 15px
+  .package
+    &-wrapper
+      grid-gap: 20px
+    &__block
+      height: 210px
+    &__image
+      width: 340px
+      height: 210px
+      &--big
+        width: 366px
+    &__column
+      width: 340px
+      &-1
+        padding: 40px 21px 25px 40px
+        width: 334px
+    &__text
+      margin-bottom: 20px
+    &--name
+      &--big
+        margin-bottom: 30px
 @media (max-width: 768px)
   .container,
     max-width: 576px
@@ -132,6 +176,7 @@
       padding-top: 30px
       &--visible
         display: block
+        overflow: scroll
     &-menu
       flex-direction: column
       &__item
@@ -174,7 +219,6 @@
       &__name
         margin-top: 10px
         margin-bottom: 0px
-
       &__rating
         display: none
       &__offer
@@ -222,6 +266,58 @@
   .footer
     &__input
       flex-basis: 100%
+    &__message
+      flex-basis: 100%
+  .modal
+    &__dialog
+      padding: 15px 20px
+      width: 300px
+  .package
+    &-wrapper
+      grid-template-columns: 1fr
+    &__pack
+    &__pack-1
+      flex-direction: column
+    &__pack--hotel-1
+      grid-column: 1
+      grid-row: 2
+    &__pack--hotel-2
+      grid-column: 1
+      grid-row: 3
+    &__pack--hotel-3
+      grid-column: 1
+      grid-row: 4
+    &__pack--hotel-4
+      grid-column: 1
+      grid-row: 5
+    &__block
+      height: 250px
+    &__image
+      width: 340px
+      height: 250px
+      width: 100%
+      &--big
+        width: 100%
+        height: 250px
+        border-radius: 8px 8px 0 0
+    &__column
+      width: 100%
+      padding: 30px 21px 23px 40px
+      &-1
+        padding: 30px 21px 23px 40px
+        width: 100%
+        height: 250px
+        border-radius: 0 0 8px 8px
+    &__text
+      display: none
+    &__name
+      margin-bottom: 24px
+    &__room
+      &--big
+        margin-bottom: 24px
+  .stars
+    display: none
+
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -230,6 +326,9 @@
       margin-bottom: 20px
     &-slider
       height: 250px
+  .search
+    &__input
+      width: 240px
   .newsletter
     padding: 76px 0 83px 0
     &__title
@@ -292,14 +391,26 @@
       margin-bottom: 10px
     &__privacy
       margin-right: 5px
-@media (max-width: 320px)
+  .modal
+    &__dialog
+      padding: 15px 20px
+      width: 300px
+    &__bottom
+      flex-direction: column-reverse
+      align-items: start
+    &__info
+      margin-bottom: 10px
+    &__input
+      height: 40px
+      padding: 0 8px
+    &__message
+      min-height: 90px
+      padding: 5px 8px
+@media (min-width: 320px) and (max-width: 480px)
   .hotel
     padding-bottom: 40px
     &__slider
       height: 170px
-  .search
-    &__input
-      width: 240px
   .reviews
     &__title
       font-size: 18px
@@ -307,3 +418,12 @@
       margin-bottom: 40px
   .card
     width: 100%
+  .footer
+    &__contact
+      &-details
+        width: 285px
+      &-form
+        width: 285px
+  .modal
+    &__dialog
+      width: 250px
