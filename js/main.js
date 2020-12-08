@@ -56,6 +56,8 @@ $(document).ready(function () {
     $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
     let noScroll = document.querySelector("body");
     noScroll.classList.toggle("scroll-hidden")
+    let flowScroll = document.querySelector(".modal__overlay");
+    flowScroll.classList.toggle("scroll-flow")
   }
   function closeModal(event) {
     event.preventDefault();

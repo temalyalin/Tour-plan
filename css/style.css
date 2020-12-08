@@ -22,6 +22,10 @@ img {
   overflow: hidden;
 }
 
+.scroll-flow {
+  overflow: scroll;
+}
+
 .input {
   background-color: #fff;
   border-radius: 4px;
@@ -1614,6 +1618,7 @@ template {
   top: 50%;
   left: 50%;
   max-width: 478px;
+  height: 300px;
   padding: 33px 88px;
   background-color: #0A223D;
   -webkit-transform: translate(-50%, -50%);
@@ -1625,6 +1630,7 @@ template {
   opacity: 0;
   -webkit-transition: opacity 0,2s;
   transition: opacity 0,2s;
+  overflow-y: scroll;
 }
 
 .modal__dialog--visible {
