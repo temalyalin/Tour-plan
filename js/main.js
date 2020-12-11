@@ -73,5 +73,24 @@ $(document).ready(function () {
     if (eventObject.which == 27)
     closeModal(event);
   });
-  
+  $(".form").each(function() {
+    $(this).validate({
+    errorClass: "invalid",
+      messages: {
+    name: {
+      required: "Укажите имя",
+      minlength: "Имя дожно быть не короче 2 букв"
+    },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    },
+    phone: {
+      required: "Телефон обязателен",
+    },
+      },
+  });
+  })
+  AOS.init();
+  $(".phone").mask("+7(000)-(000)-00-00");
 });

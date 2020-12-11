@@ -9,11 +9,13 @@
   &__pack-1
     grid-column: span 2
     display: flex
-    width: 100%
+    border-radius: 8px 8px 8px 8px
+    overflow: hidden
   &__pack
     display: flex
     flex-direction: column
-    width: 100%
+    border-radius: 8px 8px 8px 8px
+    overflow: hidden
   &__title
     font-style: normal
     font-weight: bold
@@ -23,17 +25,12 @@
     text-transform: uppercase
     margin-bottom: 65px
   &__column-1
-    width: 364px
-    height: 500px
     padding: 46px 21px 25px 43px
     background-color: $dark
-    border-radius: 0 8px 8px 0
+    height: 500px
   &__column
-    width: 350px
-    height: 250px
     padding: 30px 21px 25px 32px
     background-color: $dark
-    border-radius: 0 0 8px 8px
   &__block
     position: relative
     height: 250px
@@ -50,11 +47,9 @@
   &__image
     width: 350px
     height: 250px
-    border-radius: 8px 8px 0 0
     &--big
       min-width: 366px
       height: 500px
-      border-radius: 8px 0 0 8px
   &__offer
     position: absolute
     font-style: normal
